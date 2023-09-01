@@ -63,7 +63,7 @@ or [`MustDial`](https://pkg.go.dev/github.com/grassrootseconomics/w3-celo#MustDi
 
 ```go
 // Connect (or panic on error)
-client := w3.MustDial("https://rpc.ankr.com/eth")
+client := w3.MustDial("https://rpc.ankr.com/celo")
 defer client.Close()
 ```
 
@@ -145,7 +145,7 @@ input, err := funcTransfer.EncodeArgs(w3.A("0x…"), w3.I("1 ether"))
 
 ```go
 signer := types.LatestSigner(params.MainnetChainConfig)
-tx := types.MustSignNewTx(privKey, signer, &types.DynamicFeeTx{
+tx := types.MustSignNewTx(privKey, signer, &types.CeloDynamicFeeTx{
 	To:        w3.A("0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"),
 	Nonce:     0,
 	Data:      input,
