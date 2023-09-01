@@ -1,4 +1,4 @@
-# w3
+# w3-celo
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/grassrootseconomics/w3-celo.svg)](https://pkg.go.dev/github.com/grassrootseconomics/w3-celo)
 [![Go Report Card](https://goreportcard.com/badge/github.com/grassrootseconomics/w3-celo)](https://goreportcard.com/report/github.com/grassrootseconomics/w3-celo)
