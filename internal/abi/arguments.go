@@ -5,8 +5,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/lmittmann/w3/internal/crypto"
+	"github.com/celo-org/celo-blockchain/accounts/abi"
+	"github.com/grassrootseconomics/w3-celo/internal/crypto"
 )
 
 // Arguments represents a slice of [abi.Argument]'s.

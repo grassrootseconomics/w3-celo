@@ -4,12 +4,12 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/lmittmann/w3"
-	"github.com/lmittmann/w3/module/eth"
-	"github.com/lmittmann/w3/rpctest"
-	"github.com/lmittmann/w3/w3types"
+	"github.com/celo-org/celo-blockchain/common"
+	"github.com/celo-org/celo-blockchain/core/types"
+	"github.com/grassrootseconomics/w3-celo"
+	"github.com/grassrootseconomics/w3-celo/module/eth"
+	"github.com/grassrootseconomics/w3-celo/rpctest"
+	"github.com/grassrootseconomics/w3-celo/w3types"
 )
 
 var (

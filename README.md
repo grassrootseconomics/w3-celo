@@ -1,14 +1,16 @@
 # w3
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/lmittmann/w3.svg)](https://pkg.go.dev/github.com/lmittmann/w3)
-[![Go Report Card](https://goreportcard.com/badge/github.com/lmittmann/w3)](https://goreportcard.com/report/github.com/lmittmann/w3)
-[![Coverage Status](https://coveralls.io/repos/github/lmittmann/w3/badge.svg?branch=main)](https://coveralls.io/github/lmittmann/w3?branch=main)
-[![Latest Release](https://img.shields.io/github/v/release/lmittmann/w3)](https://github.com/lmittmann/w3/releases)
+[![Go Reference](https://pkg.go.dev/badge/github.com/grassrootseconomics/w3-celo.svg)](https://pkg.go.dev/github.com/grassrootseconomics/w3-celo)
+[![Go Report Card](https://goreportcard.com/badge/github.com/grassrootseconomics/w3-celo)](https://goreportcard.com/report/github.com/grassrootseconomics/w3-celo)
+[![Coverage Status](https://coveralls.io/repos/github/grassrootseconomics/w3-celo/badge.svg?branch=main)](https://coveralls.io/github/grassrootseconomics/w3-celo?branch=main)
+[![Latest Release](https://img.shields.io/github/v/release/grassrootseconomics/w3-celo)](https://github.com/grassrootseconomics/w3-celo/releases)
 
 <img src="https://user-images.githubusercontent.com/3458786/153202258-24bf253e-5ab0-4efd-a0ed-43dc1bf093c9.png" align="right" alt="W3 Gopher" width="158" height="224">
 
-Package `w3` implements a blazing fast and modular Ethereum JSON RPC client with
+Package `w3-celo` implements a blazing fast and modular Celo JSON RPC client with
 first-class ABI support.
+
+`w3-celo`
 
 * **Batch request** support significantly reduces the duration of requests to
   both remote and local endpoints.
@@ -17,12 +19,12 @@ first-class ABI support.
 * **Modular** API allows to create custom RPC method integrations that can be
   used alongside the methods implemented by the package.
 
-`w3` is closely linked to [go-ethereum](https://github.com/ethereum/go-ethereum)
-and uses a variety of its types, such as [`common.Address`](https://pkg.go.dev/github.com/ethereum/go-ethereum/common#Address)
-or [`types.Transaction`](https://pkg.go.dev/github.com/ethereum/go-ethereum/core/types#Transaction).
+`w3-celo` is closely linked to [celo-blockchain](https://github.com/celo-org/celo-blockchain)
+and uses a variety of its types, such as [`common.Address`](https://pkg.go.dev/github.com/celo-org/celo-blockchain/common#Address)
+or [`types.Transaction`](https://pkg.go.dev/github.com/celo-org/celo-blockchain/core/types#Transaction).
 
-Batch requests with `w3` are up to **85x faster** than sequential requests with
-`go-ethereum/ethclient`.
+Batch requests with `w3-celo` are up to **85x faster** than sequential requests with
+`celo-blockchain/ethclient`.
 
 <details>
 <summary>Benchmarks</summary>
@@ -35,20 +37,27 @@ Call_Block100       6.89s ± 7%         1.94s ±11%  -71.77%  (p=0.000 n=24+23)
 </pre>
 </details>
 
+## About
+
+> **Note**
+> Check out the [original w3](https://github.com/lmittmann/w3)!
+
+`w3-celo` is a fork of the original library replacing all incompatible Ethereum types with Celo types.
+
 ## Install
 
 ```
-go get github.com/lmittmann/w3
+go get github.com/grassrootseconomics/w3-celo
 ```
 
 
 ## Getting Started
 
 > **Note**
-> Check out the [examples](https://github.com/lmittmann/w3/tree/main/examples)!
+> Check out the [examples](https://github.com/grassrootseconomics/w3-celo/tree/main/examples)!
 
-Connect to an RPC endpoint via HTTP, WebSocket, or IPC using [`Dial`](https://pkg.go.dev/github.com/lmittmann/w3#Dial)
-or [`MustDial`](https://pkg.go.dev/github.com/lmittmann/w3#MustDial).
+Connect to an RPC endpoint via HTTP, WebSocket, or IPC using [`Dial`](https://pkg.go.dev/github.com/grassrootseconomics/w3-celo#Dial)
+or [`MustDial`](https://pkg.go.dev/github.com/grassrootseconomics/w3-celo#MustDial).
 
 ```go
 // Connect (or panic on error)
@@ -59,7 +68,7 @@ defer client.Close()
 
 ## Batch Requests
 
-Batch request support in the [`Client`](https://pkg.go.dev/github.com/lmittmann/w3#Client)
+Batch request support in the [`Client`](https://pkg.go.dev/github.com/grassrootseconomics/w3-celo#Client)
 allows to send multiple RPC requests in a single HTTP request. The speed gains
 to remote endpoints are huge. Fetching 100 blocks in a single batch request
 with `w3` is ~80x faster compared to sequential requests with `ethclient`.
@@ -91,16 +100,16 @@ Example: ABI binding for the ERC20-function `balanceOf`
 funcBalanceOf := w3.MustNewFunc("balanceOf(address)", "uint256")
 ```
 
-A [`Func`](https://pkg.go.dev/github.com/lmittmann/w3#Func) can be used to
+A [`Func`](https://pkg.go.dev/github.com/grassrootseconomics/w3-celo#Func) can be used to
 
-* encode arguments to the contracts input data ([`Func.EncodeArgs`](https://pkg.go.dev/github.com/lmittmann/w3#Func.EncodeArgs)),
-* decode arguments from the contracts input data ([`Func.DecodeArgs`](https://pkg.go.dev/github.com/lmittmann/w3#Func.DecodeArgs)), and
-* decode returns form the contracts output data ([`Func.DecodeReturns`](https://pkg.go.dev/github.com/lmittmann/w3#Func.DecodeReturns)).
+* encode arguments to the contracts input data ([`Func.EncodeArgs`](https://pkg.go.dev/github.com/grassrootseconomics/w3-celo#Func.EncodeArgs)),
+* decode arguments from the contracts input data ([`Func.DecodeArgs`](https://pkg.go.dev/github.com/grassrootseconomics/w3-celo#Func.DecodeArgs)), and
+* decode returns form the contracts output data ([`Func.DecodeReturns`](https://pkg.go.dev/github.com/grassrootseconomics/w3-celo#Func.DecodeReturns)).
 
 ### Reading Contracts
 
-[`Func`](https://pkg.go.dev/github.com/lmittmann/w3#Func)'s can be used with
-[`eth.CallFunc`](https://pkg.go.dev/github.com/lmittmann/w3/module/eth#CallFunc)
+[`Func`](https://pkg.go.dev/github.com/grassrootseconomics/w3-celo#Func)'s can be used with
+[`eth.CallFunc`](https://pkg.go.dev/github.com/grassrootseconomics/w3-celo/module/eth#CallFunc)
 in the client to read contract data.
 
 ```go
@@ -122,7 +131,7 @@ err := client.Call(
 
 Sending a transaction to a contract requires three steps.
 
-1. Encode the transaction input data using [`Func.EncodeArgs`](https://pkg.go.dev/github.com/lmittmann/w3#Func.EncodeArgs).
+1. Encode the transaction input data using [`Func.EncodeArgs`](https://pkg.go.dev/github.com/grassrootseconomics/w3-celo#Func.EncodeArgs).
 
 ```go
 var funcTransfer = w3.MustNewFunc("transfer(address,uint256)", "bool")
@@ -130,7 +139,7 @@ var funcTransfer = w3.MustNewFunc("transfer(address,uint256)", "bool")
 input, err := funcTransfer.EncodeArgs(w3.A("0x…"), w3.I("1 ether"))
 ```
 
-2. Create a signed transaction to the contract using [go-ethereum/types](https://github.com/ethereum/go-ethereum).
+2. Create a signed transaction to the contract using [celo-blockchain/types](https://github.com/celo-org/celo-blockchain).
 
 ```go
 signer := types.LatestSigner(params.MainnetChainConfig)
@@ -157,7 +166,7 @@ err := client.Call(
 ## Custom RPC Methods
 
 Custom RPC methods can be called with the `w3` client by creating a
-[`core.Caller`](https://pkg.go.dev/github.com/lmittmann/w3/core#Caller)
+[`core.Caller`](https://pkg.go.dev/github.com/grassrootseconomics/w3-celo/core#Caller)
 implementation.
 The `w3/module/eth` package can be used as implementation reference.
 
@@ -177,7 +186,7 @@ var (
 ```
 
 Note that these functions panic if the string cannot be parsed. Use
-[go-ethereum/common](https://pkg.go.dev/github.com/ethereum/go-ethereum/common)
+[celo-blockchain/common](https://pkg.go.dev/github.com/celo-org/celo-blockchain/common)
 to parse strings that may not be valid instead.
 
 
@@ -185,7 +194,7 @@ to parse strings that may not be valid instead.
 
 List of supported RPC methods.
 
-### [`eth`](https://pkg.go.dev/github.com/lmittmann/w3/module/eth)
+### [`eth`](https://pkg.go.dev/github.com/grassrootseconomics/w3-celo/module/eth)
 
 | Method                                    | Go Code
 | :---------------------------------------- | :-------
@@ -201,7 +210,7 @@ List of supported RPC methods.
 | `eth_getBlockTransactionCountByHash`      | `eth.BlockTxCountByHash(hash common.Hash).Returns(count *uint)`
 | `eth_getBlockTransactionCountByNumber`    | `eth.BlockTxCountByNumber(number *big.Int).Returns(count *uint)`
 | `eth_getCode`                             | `eth.Code(addr common.Address, blockNumber *big.Int).Returns(code *[]byte)`
-| `eth_getLogs`                             | `eth.Logs(q ethereum.FilterQuery).Returns(logs *[]types.Log)`
+| `eth_getLogs`                             | `eth.Logs(q celo.FilterQuery).Returns(logs *[]types.Log)`
 | `eth_getStorageAt`                        | `eth.StorageAt(addr common.Address, slot common.Hash, blockNumber *big.Int).Returns(storage *common.Hash)`
 | `eth_getTransactionByHash`                | `eth.Tx(hash common.Hash).Returns(tx *types.Transaction)`
 | `eth_getTransactionByBlockHashAndIndex`   | `eth.TxByBlockHashAndIndex(blockHash common.Hash, index uint).Returns(tx *types.Transaction)`
@@ -214,14 +223,14 @@ List of supported RPC methods.
 | `eth_getUncleCountByBlockHash`            | `eth.UncleCountByBlockHash(hash common.Hash).Returns(count *uint)`
 | `eth_getUncleCountByBlockNumber`          | `eth.UncleCountByBlockNumber(number *big.Int).Returns(count *uint)`
 
-### [`debug`](https://pkg.go.dev/github.com/lmittmann/w3/module/debug)
+### [`debug`](https://pkg.go.dev/github.com/grassrootseconomics/w3-celo/module/debug)
 
 | Method                   | Go Code
 | :----------------------- | :-------
 | `debug_traceCall`        | `debug.TraceCall(msg *w3types.Message, blockNumber *big.Int, config *debug.TraceConfig).Returns(trace *debug.Trace)`<br>`debug.CallTraceCall(msg *w3types.Message, blockNumber *big.Int, overrides w3types.State).Returns(trace *debug.CallTrace)`
 | `debug_traceTransaction` | `debug.TraceTx(txHash common.Hash, config *debug.TraceConfig).Returns(trace *debug.Trace)`<br>`debug.CallTraceTx(txHash common.Hash, overrides w3types.State).Returns(trace *debug.CallTrace)`
 
-### [`txpool`](https://pkg.go.dev/github.com/lmittmann/w3/module/txpool)
+### [`txpool`](https://pkg.go.dev/github.com/grassrootseconomics/w3-celo/module/txpool)
 
 | Method               | Go Code
 | :--------------------| :-------
@@ -229,14 +238,14 @@ List of supported RPC methods.
 | `txpool_contentFrom` | `txpool.ContentFrom(addr common.Address).Returns(resp *txpool.ContentFromResponse)`
 | `txpool_status`      | `txpool.Status().Returns(resp *txpool.StatusResponse)`
 
-### [`web3`](https://pkg.go.dev/github.com/lmittmann/w3/module/web3)
+### [`web3`](https://pkg.go.dev/github.com/grassrootseconomics/w3-celo/module/web3)
 
 | Method               | Go Code
 | :------------------- | :-------
 | `web3_clientVersion` | `web3.ClientVersion().Returns(clientVersion *string)`
 
-### Third Party RPC Method Packages
+### Packages using this library
 
 | Package                                                                  | Description
 | :----------------------------------------------------------------------- | :-----------
-| [github.com/lmittmann/flashbots](https://github.com/lmittmann/flashbots) | Package `flashbots` implements RPC API bindings for the Flashbots relay and mev-geth.
+| [github.com/grassrootseconomics/celoutils](https://github.com/grassrootseconomics/celoutils) | High level Celo utilities specific to Grassroots Economics.

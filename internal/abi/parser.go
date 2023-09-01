@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"strconv"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
+	"github.com/celo-org/celo-blockchain/accounts/abi"
 )
 
 var ErrSyntax = errors.New("syntax error")

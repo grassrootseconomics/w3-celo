@@ -1,13 +1,13 @@
 module examples
 
-go 1.20
+go 1.21
 
 require (
-	github.com/ethereum/go-ethereum v1.12.0
-	github.com/lmittmann/w3 v0.0.0
+	github.com/celo-org/celo-blockchain v1.12.0
+	github.com/grassrootseconomics/w3-celo v0.0.0
 )
 
-replace github.com/lmittmann/w3 => ../
+replace github.com/grassrootseconomics/w3-celo => ../
 
 require (
 	github.com/DataDog/zstd v1.5.2 // indirect

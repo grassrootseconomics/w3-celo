@@ -4,10 +4,10 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/lmittmann/w3/module/txpool"
-	"github.com/lmittmann/w3/rpctest"
+	"github.com/celo-org/celo-blockchain/common"
+	"github.com/celo-org/celo-blockchain/core/types"
+	"github.com/grassrootseconomics/w3-celo/module/txpool"
+	"github.com/grassrootseconomics/w3-celo/rpctest"
 )
 
 func TestContent(t *testing.T) {

@@ -19,10 +19,10 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/lmittmann/w3"
-	"github.com/lmittmann/w3/module/eth"
-	"github.com/lmittmann/w3/w3types"
+	"github.com/celo-org/celo-blockchain/core/types"
+	"github.com/grassrootseconomics/w3-celo"
+	"github.com/grassrootseconomics/w3-celo/module/eth"
+	"github.com/grassrootseconomics/w3-celo/w3types"
 )
 
 var (
@@ -35,7 +35,7 @@ var (
 
 func main() {
 	// parse flags
-	flag.Uint64Var(&startBlock, "start", 10_000_000, "Start block")
+	flag.Uint64Var(&startBlock, "start", 20_000_000, "Start block")
 	flag.Usage = func() {
 		fmt.Println("scan_blocks interates over blocks with their transactions from a given start block.")
 		flag.PrintDefaults()
@@ -43,7 +43,7 @@ func main() {
 	flag.Parse()
 
 	// connect to RPC endpoint
-	client := w3.MustDial("https://rpc.ankr.com/eth")
+	client := w3.MustDial("https://rpc.ankr.com/celo")
 	defer client.Close()
 
 	// fetch blocks in bulk

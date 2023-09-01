@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/lmittmann/w3/internal/module"
-	"github.com/lmittmann/w3/w3types"
+	"github.com/celo-org/celo-blockchain/common"
+	"github.com/celo-org/celo-blockchain/common/hexutil"
+	"github.com/grassrootseconomics/w3-celo/internal/module"
+	"github.com/grassrootseconomics/w3-celo/w3types"
 )
 
 // CallTraceCall requests the call trace of the given message.

@@ -7,7 +7,7 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"github.com/lmittmann/w3/internal"
+	"github.com/grassrootseconomics/w3-celo/internal"
 )
 
 func TestLexer(t *testing.T) {

@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/celo-org/celo-blockchain/common"
+	"github.com/celo-org/celo-blockchain/core/vm"
+	"github.com/grassrootseconomics/w3-celo/internal/module"
+	"github.com/grassrootseconomics/w3-celo/w3types"
 	"github.com/holiman/uint256"
-	"github.com/lmittmann/w3/internal/module"
-	"github.com/lmittmann/w3/w3types"
 )
 
 // TraceCall requests the trace of the given message.

@@ -7,7 +7,7 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/celo-org/celo-blockchain/common"
 )
 
 // Common [big.Int]'s.

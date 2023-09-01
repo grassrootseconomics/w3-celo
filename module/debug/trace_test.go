@@ -3,12 +3,12 @@ package debug_test
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/celo-org/celo-blockchain/core/vm"
+	"github.com/grassrootseconomics/w3-celo"
+	"github.com/grassrootseconomics/w3-celo/module/debug"
+	"github.com/grassrootseconomics/w3-celo/rpctest"
+	"github.com/grassrootseconomics/w3-celo/w3types"
 	"github.com/holiman/uint256"
-	"github.com/lmittmann/w3"
-	"github.com/lmittmann/w3/module/debug"
-	"github.com/lmittmann/w3/rpctest"
-	"github.com/lmittmann/w3/w3types"
 )
 
 func TestTraceTx(t *testing.T) {

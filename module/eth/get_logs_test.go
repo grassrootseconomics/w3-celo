@@ -3,13 +3,13 @@ package eth_test
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/celo-org/celo-blockchain"
+	"github.com/celo-org/celo-blockchain/common"
+	"github.com/celo-org/celo-blockchain/core/types"
 	"github.com/google/go-cmp/cmp"
-	"github.com/lmittmann/w3"
-	"github.com/lmittmann/w3/module/eth"
-	"github.com/lmittmann/w3/rpctest"
+	"github.com/grassrootseconomics/w3-celo"
+	"github.com/grassrootseconomics/w3-celo/module/eth"
+	"github.com/grassrootseconomics/w3-celo/rpctest"
 )
 
 func TestLogs(t *testing.T) {
@@ -22,7 +22,7 @@ func TestLogs(t *testing.T) {
 	defer client.Close()
 
 	var (
-		filterQuery = ethereum.FilterQuery{
+		filterQuery = celo.FilterQuery{
 			FromBlock: w3.I("10000000"),
 			ToBlock:   w3.I("10010000"),
 			Topics:    [][]common.Hash{{w3.H("0x0d3648bd0f6ba80134a33ba9275ac585d9d315f0ad8355cddefde31afa28d0e9")}}}

@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/celo-org/celo-blockchain"
+	"github.com/celo-org/celo-blockchain/common"
+	"github.com/celo-org/celo-blockchain/common/hexutil"
+	"github.com/celo-org/celo-blockchain/core/types"
 )
 
 var addr0 = common.Address{}
@@ -79,8 +79,8 @@ func (msg *Message) MustSetTx(tx *types.Transaction, signer types.Signer) *Messa
 	return msg
 }
 
-// SetCallMsg sets msg to the [ethereum.CallMsg] callMsg and returns msg.
-func (msg *Message) SetCallMsg(callMsg ethereum.CallMsg) *Message {
+// SetCallMsg sets msg to the [celo.CallMsg] callMsg and returns msg.
+func (msg *Message) SetCallMsg(callMsg celo.CallMsg) *Message {
 	msg.From = callMsg.From
 	msg.To = callMsg.To
 	msg.Gas = callMsg.Gas

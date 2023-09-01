@@ -3,8 +3,8 @@ package txpool_test
 import (
 	"testing"
 
-	"github.com/lmittmann/w3/module/txpool"
-	"github.com/lmittmann/w3/rpctest"
+	"github.com/grassrootseconomics/w3-celo/module/txpool"
+	"github.com/grassrootseconomics/w3-celo/rpctest"
 )
 
 func TestStatus(t *testing.T) {

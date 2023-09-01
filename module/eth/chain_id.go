@@ -1,8 +1,8 @@
 package eth
 
 import (
-	"github.com/lmittmann/w3/internal/module"
-	"github.com/lmittmann/w3/w3types"
+	"github.com/grassrootseconomics/w3-celo/internal/module"
+	"github.com/grassrootseconomics/w3-celo/w3types"
 )
 
 // ChainID requests the chains ID.

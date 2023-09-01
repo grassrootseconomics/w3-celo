@@ -21,9 +21,9 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/lmittmann/w3"
-	"github.com/lmittmann/w3/module/eth"
+	"github.com/celo-org/celo-blockchain/common"
+	"github.com/grassrootseconomics/w3-celo"
+	"github.com/grassrootseconomics/w3-celo/module/eth"
 )
 
 var (
@@ -41,7 +41,7 @@ var (
 func main() {
 	// parse flags
 	flag.TextVar(&addrAcc, "acc", w3.A("0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"), "Account address")
-	flag.TextVar(&addrToken, "token", w3.A("0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"), "Token address")
+	flag.TextVar(&addrToken, "token", w3.A("0x2F9aa5Ac5E22C54C4B1DC4eB88AB7320215586dc"), "Token address")
 	flag.Usage = func() {
 		fmt.Println("token_balance prints the balance of an ERC20 token for a given account.")
 		flag.PrintDefaults()
@@ -49,7 +49,7 @@ func main() {
 	flag.Parse()
 
 	// connect to RPC endpoint
-	client := w3.MustDial("https://rpc.ankr.com/eth")
+	client := w3.MustDial("https://rpc.ankr.com/celo")
 	defer client.Close()
 
 	// fetch token details and account balance

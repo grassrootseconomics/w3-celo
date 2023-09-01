@@ -10,8 +10,8 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/rpc"
-	"github.com/lmittmann/w3/w3types"
+	"github.com/celo-org/celo-blockchain/rpc"
+	"github.com/grassrootseconomics/w3-celo/w3types"
 	"golang.org/x/time/rate"
 )
 

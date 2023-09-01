@@ -3,21 +3,21 @@ package eth
 import (
 	"fmt"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/rpc"
-	"github.com/lmittmann/w3/internal/module"
-	"github.com/lmittmann/w3/w3types"
+	"github.com/celo-org/celo-blockchain"
+	"github.com/celo-org/celo-blockchain/core/types"
+	"github.com/celo-org/celo-blockchain/rpc"
+	"github.com/grassrootseconomics/w3-celo/internal/module"
+	"github.com/grassrootseconomics/w3-celo/w3types"
 )
 
-// Logs requests the logs of the given ethereum.FilterQuery q.
-func Logs(q ethereum.FilterQuery) w3types.CallerFactory[[]types.Log] {
+// Logs requests the logs of the given celo.FilterQuery q.
+func Logs(q celo.FilterQuery) w3types.CallerFactory[[]types.Log] {
 	return &logsFactory{filterQuery: q}
 }
 
 type logsFactory struct {
 	// args
-	filterQuery ethereum.FilterQuery
+	filterQuery celo.FilterQuery
 
 	// returns
 	returns *[]types.Log
@@ -50,7 +50,7 @@ func (f *logsFactory) HandleResponse(elem rpc.BatchElem) error {
 	return nil
 }
 
-func toFilterArg(q ethereum.FilterQuery) (any, error) {
+func toFilterArg(q celo.FilterQuery) (any, error) {
 	arg := map[string]any{
 		"topics": q.Topics,
 	}

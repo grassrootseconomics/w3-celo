@@ -3,7 +3,7 @@ Package w3types implements common types.
 */
 package w3types
 
-import "github.com/ethereum/go-ethereum/rpc"
+import "github.com/celo-org/celo-blockchain/rpc"
 
 // Func is the interface that wraps the methods for ABI encoding and decoding.
 type Func interface {

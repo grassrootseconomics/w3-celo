@@ -5,9 +5,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/crypto"
-	_abi "github.com/lmittmann/w3/internal/abi"
+	"github.com/celo-org/celo-blockchain/accounts/abi"
+	"github.com/celo-org/celo-blockchain/crypto"
+	_abi "github.com/grassrootseconomics/w3-celo/internal/abi"
 )
 
 var (

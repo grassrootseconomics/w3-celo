@@ -3,9 +3,9 @@ package eth
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/lmittmann/w3/internal/module"
-	"github.com/lmittmann/w3/w3types"
+	"github.com/celo-org/celo-blockchain/common"
+	"github.com/grassrootseconomics/w3-celo/internal/module"
+	"github.com/grassrootseconomics/w3-celo/w3types"
 )
 
 // Code requests the code of the given common.Address addr at the given

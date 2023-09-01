@@ -3,10 +3,10 @@ package debug_test
 import (
 	"testing"
 
-	"github.com/lmittmann/w3"
-	"github.com/lmittmann/w3/module/debug"
-	"github.com/lmittmann/w3/rpctest"
-	"github.com/lmittmann/w3/w3types"
+	"github.com/grassrootseconomics/w3-celo"
+	"github.com/grassrootseconomics/w3-celo/module/debug"
+	"github.com/grassrootseconomics/w3-celo/rpctest"
+	"github.com/grassrootseconomics/w3-celo/w3types"
 )
 
 func TestCallTraceTx(t *testing.T) {

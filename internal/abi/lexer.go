@@ -6,7 +6,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
+	"github.com/celo-org/celo-blockchain/accounts/abi"
 )
 
 type item struct {

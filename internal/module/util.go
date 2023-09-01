@@ -4,7 +4,7 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/celo-org/celo-blockchain/common/hexutil"
 )
 
 var errNotFound = errors.New("not found")

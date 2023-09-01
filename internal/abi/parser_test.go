@@ -5,10 +5,10 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
+	"github.com/celo-org/celo-blockchain/accounts/abi"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"github.com/lmittmann/w3/internal"
+	"github.com/grassrootseconomics/w3-celo/internal"
 )
 
 var (

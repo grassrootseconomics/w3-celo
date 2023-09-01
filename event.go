@@ -3,11 +3,11 @@ package w3
 import (
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	_abi "github.com/lmittmann/w3/internal/abi"
+	"github.com/celo-org/celo-blockchain/accounts/abi"
+	"github.com/celo-org/celo-blockchain/common"
+	"github.com/celo-org/celo-blockchain/core/types"
+	"github.com/celo-org/celo-blockchain/crypto"
+	_abi "github.com/grassrootseconomics/w3-celo/internal/abi"
 )
 
 // Event represents a Smart Contract event decoder.

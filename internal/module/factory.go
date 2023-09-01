@@ -5,9 +5,9 @@ import (
 	"encoding/json"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/rpc"
-	"github.com/lmittmann/w3/w3types"
+	"github.com/celo-org/celo-blockchain/common/hexutil"
+	"github.com/celo-org/celo-blockchain/rpc"
+	"github.com/grassrootseconomics/w3-celo/w3types"
 )
 
 var (

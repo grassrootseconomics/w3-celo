@@ -3,10 +3,10 @@ package eth_test
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/lmittmann/w3"
-	"github.com/lmittmann/w3/module/eth"
-	"github.com/lmittmann/w3/rpctest"
+	"github.com/celo-org/celo-blockchain/common"
+	"github.com/grassrootseconomics/w3-celo"
+	"github.com/grassrootseconomics/w3-celo/module/eth"
+	"github.com/grassrootseconomics/w3-celo/rpctest"
 )
 
 func TestStorageAt(t *testing.T) {

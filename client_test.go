@@ -11,17 +11,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/celo-org/celo-blockchain"
+	"github.com/celo-org/celo-blockchain/common"
+	"github.com/celo-org/celo-blockchain/core/types"
+	"github.com/celo-org/celo-blockchain/ethclient"
+	"github.com/celo-org/celo-blockchain/rpc"
 	"github.com/google/go-cmp/cmp"
-	"github.com/lmittmann/w3"
-	"github.com/lmittmann/w3/internal"
-	"github.com/lmittmann/w3/module/eth"
-	"github.com/lmittmann/w3/rpctest"
-	"github.com/lmittmann/w3/w3types"
+	"github.com/grassrootseconomics/w3-celo"
+	"github.com/grassrootseconomics/w3-celo/internal"
+	"github.com/grassrootseconomics/w3-celo/module/eth"
+	"github.com/grassrootseconomics/w3-celo/rpctest"
+	"github.com/grassrootseconomics/w3-celo/w3types"
 	"golang.org/x/time/rate"
 )
 
@@ -320,7 +320,7 @@ func BenchmarkCall_BalanceOf100(b *testing.B) {
 				if err != nil {
 					b.Fatalf("Failed to encode args: %v", err)
 				}
-				ethClient.CallContract(context.Background(), ethereum.CallMsg{
+				ethClient.CallContract(context.Background(), celo.CallMsg{
 					To:   &addrWeth9,
 					Data: input,
 				}, nil)

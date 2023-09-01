@@ -6,13 +6,13 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/celo-org/celo-blockchain/common"
+	"github.com/celo-org/celo-blockchain/core/types"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"github.com/lmittmann/w3"
-	"github.com/lmittmann/w3/module/eth"
-	"github.com/lmittmann/w3/rpctest"
+	"github.com/grassrootseconomics/w3-celo"
+	"github.com/grassrootseconomics/w3-celo/module/eth"
+	"github.com/grassrootseconomics/w3-celo/rpctest"
 )
 
 var type2Tx = types.NewTx(&types.DynamicFeeTx{
@@ -134,12 +134,11 @@ func TestTxReceipt(t *testing.T) {
 						Index:       187,
 					},
 				},
-				TxHash:            w3.H("0xed382cb554ad10e94921d263a56c670669d6c380bbdacdbf96fed625b7132a1d"),
-				GasUsed:           47238,
-				EffectiveGasPrice: w3.I("31504967822"),
-				BlockHash:         w3.H("0xa32d159805750cbe428b799a49b85dcb2300f61d806786f317260e721727d162"),
-				BlockNumber:       big.NewInt(12965001),
-				TransactionIndex:  98,
+				TxHash:           w3.H("0xed382cb554ad10e94921d263a56c670669d6c380bbdacdbf96fed625b7132a1d"),
+				GasUsed:          47238,
+				BlockHash:        w3.H("0xa32d159805750cbe428b799a49b85dcb2300f61d806786f317260e721727d162"),
+				BlockNumber:      big.NewInt(12965001),
+				TransactionIndex: 98,
 			},
 		},
 		{

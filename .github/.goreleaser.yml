@@ -1,7 +1,7 @@
 release:
   github:
-    owner: lmittmann
-    name: w3
+    owner: grassrootseconomics
+    name: w3-celo
   draft: true
   footer: |
     **Full Changelog**: [`{{ .PreviousTag }}…{{ .Tag }}`](https://github.com/{{ .Env.GITHUB_REPOSITORY }}/compare/{{ .PreviousTag }}...{{ .Tag }})

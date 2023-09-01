@@ -24,14 +24,14 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/lmittmann/w3"
-	"github.com/lmittmann/w3/module/eth"
-	"github.com/lmittmann/w3/w3types"
+	"github.com/celo-org/celo-blockchain/common"
+	"github.com/grassrootseconomics/w3-celo"
+	"github.com/grassrootseconomics/w3-celo/module/eth"
+	"github.com/grassrootseconomics/w3-celo/w3types"
 )
 
 var (
-	addrUniV3Quoter = w3.A("0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6")
+	addrUniV3Quoter = w3.A("0x82825d0554fA07f7FC52Ab63c961F330fdEFa8E8")
 
 	funcQuoteExactInputSingle = w3.MustNewFunc("quoteExactInputSingle(address tokenIn, address tokenOut, uint24 fee, uint256 amountIn, uint160 sqrtPriceLimitX96)", "uint256 amountOut")
 	funcName                  = w3.MustNewFunc("name()", "string")
@@ -47,8 +47,8 @@ var (
 func main() {
 	// parse flags
 	flag.TextVar(&amountIn, "amountIn", w3.I("1 ether"), "Token address")
-	flag.TextVar(&addrTokenIn, "tokenIn", w3.A("0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"), "Token in")
-	flag.TextVar(&addrTokenOut, "tokenOut", w3.A("0x6B175474E89094C44Da98b954EedeAC495271d0F"), "Token out")
+	flag.TextVar(&addrTokenIn, "tokenIn", w3.A("0x471EcE3750Da237f93B8E339c536989b8978a438"), "Token in")
+	flag.TextVar(&addrTokenOut, "tokenOut", w3.A("0x765DE816845861e75A25fCA122bb6898B8B1282a"), "Token out")
 	flag.Usage = func() {
 		fmt.Println("uniswap_quote prints the UniSwap V3 exchange rate to swap amontIn of tokenIn for tokenOut.")
 		flag.PrintDefaults()
@@ -56,7 +56,7 @@ func main() {
 	flag.Parse()
 
 	// connect to RPC endpoint
-	client := w3.MustDial("https://rpc.ankr.com/eth")
+	client := w3.MustDial("https://rpc.ankr.com/celo")
 	defer client.Close()
 
 	// fetch token details

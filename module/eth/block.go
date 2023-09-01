@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/lmittmann/w3/internal/module"
-	"github.com/lmittmann/w3/w3types"
+	"github.com/celo-org/celo-blockchain/common"
+	"github.com/celo-org/celo-blockchain/core/types"
+	"github.com/grassrootseconomics/w3-celo/internal/module"
+	"github.com/grassrootseconomics/w3-celo/w3types"
 )
 
 // BlockByHash requests the block with the given hash with full transactions.
@@ -85,7 +85,8 @@ func (b *rpcBlock) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	block := types.NewBlockWithHeader(&header).WithBody(blockTxs.Transactions, nil)
+	// https://pkg.go.dev/github.com/celo-org/celo-blockchain@v1.7.4/core/types#Body
+	block := types.NewBlockWithHeader(&header).WithBody(blockTxs.Transactions, nil, nil)
 	*b = (rpcBlock)(*block)
 	return nil
 }

@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/celo-org/celo-blockchain/accounts/abi"
+	"github.com/celo-org/celo-blockchain/common"
 	"github.com/google/go-cmp/cmp"
 )
 
