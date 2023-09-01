@@ -2,7 +2,7 @@
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/grassrootseconomics/w3-celo.svg)](https://pkg.go.dev/github.com/grassrootseconomics/w3-celo)
 [![Go Report Card](https://goreportcard.com/badge/github.com/grassrootseconomics/w3-celo)](https://goreportcard.com/report/github.com/grassrootseconomics/w3-celo)
-[![Coverage Status](https://coveralls.io/repos/github/grassrootseconomics/w3-celo/badge.svg?branch=main)](https://coveralls.io/github/grassrootseconomics/w3-celo?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/grassrootseconomics/w3-celo/badge.svg?branch=master)](https://coveralls.io/github/grassrootseconomics/w3-celo?branch=master)
 [![Latest Release](https://img.shields.io/github/v/release/grassrootseconomics/w3-celo)](https://github.com/grassrootseconomics/w3-celo/releases)
 
 <img src="https://user-images.githubusercontent.com/3458786/153202258-24bf253e-5ab0-4efd-a0ed-43dc1bf093c9.png" align="right" alt="W3 Gopher" width="158" height="224">
