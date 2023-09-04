@@ -44,6 +44,8 @@ Call_Block100       6.89s ± 7%         1.94s ±11%  -71.77%  (p=0.000 n=24+23)
 
 `w3-celo` is a fork of the original library replacing all incompatible Ethereum types with Celo types.
 
+w3VM changes will not be included in this library as it closely follows Ethereum Geth.
+
 Versioning closely follows the original.
 
 ## Install
