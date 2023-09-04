@@ -124,8 +124,8 @@ var (
 )
 
 err := client.Call(
-	eth.CallFunc(funcBalanceOf, weth9, addr).Returns(&weth9Balance),
-	eth.CallFunc(funcBalanceOf, dai, addr).Returns(&daiBalance),
+	eth.CallFunc(weth9, funcBalanceOf, addr).Returns(&weth9Balance),
+	eth.CallFunc(dai, funcBalanceOf, addr).Returns(&daiBalance),
 )
 ```
 
@@ -201,7 +201,7 @@ List of supported RPC methods.
 | Method                                    | Go Code
 | :---------------------------------------- | :-------
 | `eth_blockNumber`                         | `eth.BlockNumber().Returns(blockNumber *big.Int)`
-| `eth_call`                                | `eth.Call(msg *w3types.Message, blockNumber *big.Int, overrides w3types.State).Returns(output *[]byte)`<br>`eth.CallFunc(fn core.Func, contract common.Address, args ...any).Returns(returns ...any)`
+| `eth_call`                                | `eth.Call(msg *w3types.Message, blockNumber *big.Int, overrides w3types.State).Returns(output *[]byte)`<br>`eth.CallFunc(contract common.Address, f w3types.Func, args ...any).Returns(returns ...any)`
 | `eth_chainId`                             | `eth.ChainID().Returns(chainID *uint64)`
 | `eth_createAccessList`                    | `eth.AccessList(msg *w3types.Message, blockNumber *big.Int).Returns(resp *eth.AccessListResponse)`
 | `eth_estimateGas`                         | `eth.EstimateGas(msg *w3types.Message, blockNumber *big.Int).Returns(gas *uint64)`
