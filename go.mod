@@ -4,7 +4,7 @@ go 1.21
 
 require (
 	github.com/celo-org/celo-blockchain v1.7.4
-	github.com/google/go-cmp v0.5.9
+	github.com/google/go-cmp v0.6.0
 	github.com/holiman/uint256 v1.2.3
 	golang.org/x/time v0.3.0
 )
