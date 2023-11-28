@@ -5,7 +5,7 @@ go 1.21
 require (
 	github.com/celo-org/celo-blockchain v1.7.4
 	github.com/google/go-cmp v0.6.0
-	github.com/holiman/uint256 v1.2.3
+	github.com/holiman/uint256 v1.2.4
 	golang.org/x/time v0.4.0
 )
 
@@ -13,6 +13,7 @@ require (
 	filippo.io/edwards25519 v1.0.0-alpha.2 // indirect
 	github.com/StackExchange/wmi v0.0.0-20180116203802-5d049714c4a6 // indirect
 	github.com/VictoriaMetrics/fastcache v1.6.0 // indirect
+	github.com/btcsuite/btcd v0.20.1-beta // indirect
 	github.com/celo-org/celo-bls-go v0.3.4 // indirect
 	github.com/celo-org/celo-bls-go-android v0.3.3 // indirect
 	github.com/celo-org/celo-bls-go-ios v0.3.3 // indirect
