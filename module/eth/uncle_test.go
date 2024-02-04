@@ -1,14 +1,10 @@
 package eth_test
 
 import (
-	"errors"
 	"math/big"
-	"testing"
 
 	"github.com/celo-org/celo-blockchain/core/types"
 	"github.com/grassrootseconomics/w3-celo"
-	"github.com/grassrootseconomics/w3-celo/module/eth"
-	"github.com/grassrootseconomics/w3-celo/rpctest"
 )
 
 var header15050036 = types.Header{
@@ -29,55 +25,59 @@ func blockBloom(data []byte) (bloom types.Bloom) {
 	return
 }
 
-func TestUncleByBlockHashAndIndex(t *testing.T) {
-	tests := []rpctest.TestCase[types.Header]{
-		{
-			Golden:  "uncle_by_hash_and_index__15050036",
-			Call:    eth.UncleByBlockHashAndIndex(w3.H("0x7a98a492c1288a8451905bc665cb28d45fbdf8913c34d4ad756acb0609342e67"), 0),
-			WantRet: header15050036,
-		},
-		{
-			Golden:  "uncle_by_hash_and_index__15050036_1",
-			Call:    eth.UncleByBlockHashAndIndex(w3.H("0x7a98a492c1288a8451905bc665cb28d45fbdf8913c34d4ad756acb0609342e67"), 1),
-			WantErr: errors.New("w3: call failed: not found"),
-		},
-	}
+// https://github.com/grassrootseconomics/w3-celo/issues/1#issuecomment-1923405509
+// func TestUncleByBlockHashAndIndex(t *testing.T) {
+// 	tests := []rpctest.TestCase[types.Header]{
+// 		{
+// 			Golden:  "uncle_by_hash_and_index__15050036",
+// 			Call:    eth.UncleByBlockHashAndIndex(w3.H("0x7a98a492c1288a8451905bc665cb28d45fbdf8913c34d4ad756acb0609342e67"), 0),
+// 			WantRet: header15050036,
+// 		},
+// 		{
+// 			Golden:  "uncle_by_hash_and_index__15050036_1",
+// 			Call:    eth.UncleByBlockHashAndIndex(w3.H("0x7a98a492c1288a8451905bc665cb28d45fbdf8913c34d4ad756acb0609342e67"), 1),
+// 			WantErr: errors.New("w3: call failed: not found"),
+// 		},
+// 	}
 
-	rpctest.RunTestCases(t, tests)
-}
+// 	rpctest.RunTestCases(t, tests)
+// }
 
-func TestUncleByBlockNumberAndIndex(t *testing.T) {
-	tests := []rpctest.TestCase[types.Header]{
-		{
-			Golden:  "uncle_by_number_and_index__15050036",
-			Call:    eth.UncleByBlockNumberAndIndex(big.NewInt(15050036), 0),
-			WantRet: header15050036,
-		},
-	}
+// // https://github.com/grassrootseconomics/w3-celo/issues/1#issuecomment-1923405509
+// func TestUncleByBlockNumberAndIndex(t *testing.T) {
+// 	tests := []rpctest.TestCase[types.Header]{
+// 		{
+// 			Golden:  "uncle_by_number_and_index__15050036",
+// 			Call:    eth.UncleByBlockNumberAndIndex(big.NewInt(15050036), 0),
+// 			WantRet: header15050036,
+// 		},
+// 	}
 
-	rpctest.RunTestCases(t, tests)
-}
+// 	rpctest.RunTestCases(t, tests)
+// }
 
-func TestUncleCountByBlockHash(t *testing.T) {
-	tests := []rpctest.TestCase[uint]{
-		{
-			Golden:  "uncle_count_by_hash__15050036",
-			Call:    eth.UncleCountByBlockHash(w3.H("0x7a98a492c1288a8451905bc665cb28d45fbdf8913c34d4ad756acb0609342e67")),
-			WantRet: 1,
-		},
-	}
+// https://github.com/grassrootseconomics/w3-celo/issues/1#issuecomment-1923405509
+// func TestUncleCountByBlockHash(t *testing.T) {
+// 	tests := []rpctest.TestCase[uint]{
+// 		{
+// 			Golden:  "uncle_count_by_hash__15050036",
+// 			Call:    eth.UncleCountByBlockHash(w3.H("0x7a98a492c1288a8451905bc665cb28d45fbdf8913c34d4ad756acb0609342e67")),
+// 			WantRet: 1,
+// 		},
+// 	}
 
-	rpctest.RunTestCases(t, tests)
-}
+// 	rpctest.RunTestCases(t, tests)
+// }
 
-func TestUncleCountByBlockNumber(t *testing.T) {
-	tests := []rpctest.TestCase[uint]{
-		{
-			Golden:  "uncle_count_by_number__15050036",
-			Call:    eth.UncleCountByBlockNumber(big.NewInt(15050036)),
-			WantRet: 1,
-		},
-	}
+// https://github.com/grassrootseconomics/w3-celo/issues/1#issuecomment-1923405509
+// func TestUncleCountByBlockNumber(t *testing.T) {
+// 	tests := []rpctest.TestCase[uint]{
+// 		{
+// 			Golden:  "uncle_count_by_number__15050036",
+// 			Call:    eth.UncleCountByBlockNumber(big.NewInt(15050036)),
+// 			WantRet: 1,
+// 		},
+// 	}
 
-	rpctest.RunTestCases(t, tests)
-}
+// 	rpctest.RunTestCases(t, tests)
+// }

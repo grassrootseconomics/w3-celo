@@ -3,7 +3,7 @@ module github.com/grassrootseconomics/w3-celo
 go 1.21
 
 require (
-	github.com/celo-org/celo-blockchain v1.7.4
+	github.com/celo-org/celo-blockchain v1.8.0
 	github.com/google/go-cmp v0.6.0
 	github.com/holiman/uint256 v1.2.4
 	golang.org/x/time v0.5.0
@@ -13,6 +13,7 @@ require (
 	filippo.io/edwards25519 v1.0.0-alpha.2 // indirect
 	github.com/StackExchange/wmi v0.0.0-20180116203802-5d049714c4a6 // indirect
 	github.com/VictoriaMetrics/fastcache v1.6.0 // indirect
+	github.com/btcsuite/btcd/btcec/v2 v2.1.3 // indirect
 	github.com/celo-org/celo-bls-go v0.3.4 // indirect
 	github.com/celo-org/celo-bls-go-android v0.3.3 // indirect
 	github.com/celo-org/celo-bls-go-ios v0.3.3 // indirect
@@ -22,6 +23,7 @@ require (
 	github.com/celo-org/celo-bls-go-windows v0.3.3 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/deckarep/golang-set v0.0.0-20180603214616-504e848d77ea // indirect
+	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.0.1 // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
 	github.com/go-logfmt/logfmt v0.5.1 // indirect
 	github.com/go-ole/go-ole v1.2.6 // indirect
