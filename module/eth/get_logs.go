@@ -23,7 +23,7 @@ type logsFactory struct {
 	returns *[]types.Log
 }
 
-func (f *logsFactory) Returns(logs *[]types.Log) w3types.Caller {
+func (f *logsFactory) Returns(logs *[]types.Log) w3types.RPCCaller {
 	f.returns = logs
 	return f
 }
