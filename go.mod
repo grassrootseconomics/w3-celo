@@ -1,6 +1,6 @@
 module github.com/grassrootseconomics/w3-celo
 
-go 1.22
+go 1.22.3
 
 require (
 	github.com/celo-org/celo-blockchain v1.8.4
