@@ -1,9 +1,9 @@
 package eth
 
 import (
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/lmittmann/w3/w3types"
+	"github.com/celo-org/celo-blockchain"
+	"github.com/celo-org/celo-blockchain/core/types"
+	"github.com/grassrootseconomics/w3-celo/w3types"
 )
 
 // NewHeads subscribes to notifications of updates to the blockchain head.
@@ -17,7 +17,7 @@ func PendingTransactions(ch chan<- *types.Transaction) w3types.RPCSubscriber {
 }
 
 // NewLogs subscribes to notifications about logs that match the given filter query.
-func NewLogs(ch chan<- *types.Log, q ethereum.FilterQuery) w3types.RPCSubscriber {
+func NewLogs(ch chan<- *types.Log, q celo.FilterQuery) w3types.RPCSubscriber {
 	arg, err := toFilterArg(q)
 	return &ethSubscription[*types.Log]{ch, []any{"logs", arg}, err}
 }
