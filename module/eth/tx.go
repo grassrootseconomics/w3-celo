@@ -67,6 +67,14 @@ func TxReceipt(txHash common.Hash) w3types.RPCCallerFactory[types.Receipt] {
 	)
 }
 
+// TxReceipt requests the receipt of the transaction with the given hash.
+func BlockReceipts(number *big.Int) w3types.RPCCallerFactory[types.Receipts] {
+	return module.NewFactory[types.Receipts](
+		"eth_getBlockReceipts",
+		[]any{module.BlockNumberArg(number)},
+	)
+}
+
 // Nonce requests the nonce of the given common.Address addr at the given
 // blockNumber. If blockNumber is nil, the nonce at the latest known block is
 // requested.
